@@ -13,7 +13,7 @@
  	$host = 'localhost';
  	$db = 	'encuesta';
  	$user = 'root';
- 	$pwd = 	'';
+ 	$pwd = 	'root';
 	try {
 	   	$conn = new PDO('mysql:host='.$host.';dbname='.$db, $user, $pwd);
 		//echo 'Connected succesfully.<br>';
