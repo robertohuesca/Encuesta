@@ -1,0 +1,16 @@
+.Div-Box {
+    width: 90%;
+    border-top: 1px solid #bec2c8;
+    height: 70px;
+    margin: 1px auto;
+}
+
+.box {
+    float: left;
+    margin: 2px;
+    width: 100%;
+}
+.div {
+    margin-right: 20%;
+    float:right;
+}
