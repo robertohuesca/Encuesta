@@ -1,0 +1,15 @@
+.textArea {
+    float:left;
+    margin:5px;
+}
+
+input {
+    margin-bottom: 9px;
+    margin-top: 10px;
+}
+
+select {
+    margin-bottom: 9px;
+    margin-top: 10px;
+}
+
