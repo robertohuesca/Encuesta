@@ -15,6 +15,7 @@
           <link rel="stylesheet" href="css/reset.css">    
           <link rel="stylesheet" href="css/model-box.css">  
           <link rel="stylesheet" href="css/encuesta_original.css">
+            <link rel="stylesheet" href="../css/general.css">
         
           <script src="js/load.js"></script> 
     </head>
@@ -30,7 +31,6 @@
                         <li><a href="#"><span class="segundo"><i class="icon icon-newspaper"></i></span>Encuestas</a>
                             <ul>
                                 <li><a href="survey.php">Iniciar Encuestas</a> </li>  
-                                <li><a href="#">Finalizar Encuestas</a> </li> 
                             </ul>
                         </li>
                         <li><a href="#"><span class="tercero"><i class="icon icon-address-book"></i></span>Control</a>
@@ -49,7 +49,7 @@
                         <li><a href="javascript:Enviar('pages/economy.php','column_right')" title="Prueba" >Ambiente Socioeconómico</a></li>
                         <li><a href="javascript:Enviar('pages/sante.php','column_right')" title="Prueba">Salud</a></li>
                         <li><a href="javascript:Enviar('pages/clinic.php','column_right')" title="Prueba">Enfermedades Familiares</a></li>
-                        <li><a href="javascript:Enviar('default.php','column_right')" title="Prueba">Alimentación</a></li>
+                        <li><a href="javascript:Enviar('pages/alimentos.php','column_right')" title="Prueba">Alimentación</a></li>
                         <li><a href="javascript:Enviar('default.php','column_right')" title="Prueba">Hábitos</a></li>
                         <li><a href="javascript:Enviar('default.php','column_right')" title="Prueba">Tiempo Libre y Recreación</a></li>
                         <li><a href="javascript:Enviar('default.php','column_right')" title="Prueba">Finalizar</a></li>

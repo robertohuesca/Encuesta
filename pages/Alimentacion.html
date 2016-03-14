@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <title>Alimentación</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/container-div.css">
-        <link rel="stylesheet" href="css/ocultar-div.css">
-        <script type="text/javascript">    
-               function CompruebaCheckBox(checkerbox,div){
-                if(checkerbox.checked){
-                document.getElementById(div).style.display="block"
-                }
-                else{
-                document.getElementById(div).style.display="none"
-                }
-                }
-        </script>
-    </head>
-<body>
-    <div class="container-body">
-        <div class="body">
-            <div class="container-inputs">
-                <div class="input">
-                    <div class="title" style="overflow:auto"><h1>Alimentación</h1></div>
-                    <div id="formA">
-                    <form action="insert_alim.php" method="post" name="">
+        <div class="main" id="box">
+            <div class="title" style="overflow:auto"><h1>Alimentación</h1></div>
+             <form> 
+                    <div id="">
                         <ul>
                             <div class="textArea">
                                 <li><label>¿Con que frecuancia?</label></li>
@@ -47,7 +25,8 @@
                             </div>
                         </ul>
                     </div>
-                        <div class="Div-Box">
+                    
+                    <div class="">
                                 <div class="box"><label for="">Cuando tomas algún alimento ¿te sientes mal o cansado?</label></div>
                                 <div class="box">
                                 <input type="radio" value="si" name="servic-salud" checked>No
@@ -56,13 +35,12 @@
                                 <select>
                                 <option value="">Select de multiples selecciones</option>
                                 </select></div></div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    
+           
                 <div class="input">
                     <div class="title" style="overflow:auto"><h1>Ejercicio y Deporte</h1></div>
-                    <div id="formA">
-                    <form action="encuesta-form" method="" name="">
+                    <div id="">
                         <ul>
                             <div class="textArea">
                                 <li><label for="">¿Cuantas veces por semana haces ejercicio fisico?</label></li>
@@ -100,14 +78,15 @@
                                         <option value="">Halterofilia</option>
                                         <option value="">Otro especificar</option>
                                     </select>
-                                </div></div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
-                </div>
-                <div class="input">
+                    </div>
+                    
+                    
+                <div class="">
                 <div class="title" style="overflow"><h1>Habitos de Consumo</h1></div>
-                <div id="formT">
-                <form action="encuesta-form" method="post" name="">
+                <div id="">
                     <table id="consumo">
                             <tr>
                                 <th><h1>Consumes</h1></th>
@@ -176,10 +155,8 @@
                                 </td>
                             </tr>
                         </table>
-                    
-                </form>
             </div>
-            <div class="Div-Box">
+            <div class="">
                                 <div class="box"><label for="">¿Fumas?</label></div>
                                 <div class="box">
                                 <input type="radio" value="no" name="fumas" checked>No
@@ -193,7 +170,7 @@
                                     </select>
                                 </div></div>
             </div>
-            <div class="Div-Box">
+            <div class="">
                                 <div class="box"><label for="">Consideras que tus amigos ¿tienen alguna adicción?</label></div>
                                 <div class="box">
                                 <input type="radio" value="no" name="adic" checked>No
@@ -202,18 +179,17 @@
                                     <input type="text" name="adiccion">
                                 </div></div>
             </div>
-            <div class="Div-Box">
+            <div class="">
                                 <div class="box"><label for="">Consideras que tus amigos ¿consumen alguna droga?</label></div>
                                 <div class="box">
                                 <input type="radio" value="no" name="adrog" checked>No
                                 <input type="radio" value="si" name="adrog" onClick="CompruebaCheckBox(this,'DivMuestra');">Sí
                                 <div id="DivMuestra" class="div" style="display:none">Especifica: 
                                     <input type="text" name="droga">
-                                </div></div>
+                                </div>
+                </div>
             </div>
             </div>
-            </div>
+            </form>
         </div>
-    </div>
-</body>
-</html>
+

@@ -61,6 +61,22 @@ Div-Box {
     margin-left: 54px;
 }
 
+/*Catalogo Alimentacion */
+
+#alimen{
+    width: 90%;
+    margin-left: 15px;
+    padding-bottom: 8px;
+    margin-top: 5px;
+    height: 650px;
+
+}
+#alimentacion{
+    margin-left: 65px;
+    width: 90%;
+}
+
+
 .tableuser {
 	width:20px;
 	border:1px solid #ffffff;

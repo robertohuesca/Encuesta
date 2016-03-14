@@ -7,6 +7,7 @@
     </head>
     <body>
         <div class="main"  id="socio">
+            <form>
             <label class="title">Ingresos familiares</label>
             <div id="box">
                         <ul>
@@ -217,6 +218,8 @@
                 
                 
             </div>
+                <input type="submit"  id="guardars" value="Guardar" onclick="goBack()" > 
+            </form>
         </div>
         
     </body>

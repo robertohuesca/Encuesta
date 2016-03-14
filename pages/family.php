@@ -8,6 +8,7 @@
     <body>
         <div class="main" id="fam">
             <label class="title">En caso de emergencia llamar a</label>
+            <form>
             <div>
                 <table class="tableuser">
                                 <tr>
@@ -205,7 +206,9 @@
                                     </select></li>
                             </div>
                         </ul>
-
+                    </div>
+                    <input type="submit"  id="guardars" value="Guardar" onclick="goBack()" > 
+                </form>
             </div>
     </body>
 </html>

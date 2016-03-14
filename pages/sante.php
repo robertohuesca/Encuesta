@@ -7,6 +7,7 @@
     </head>
     <body>                  
         <div class="main" id="salud">
+            <form>
             <label class="title">Salud</label>
                 <div id="box">
                         <ul>
@@ -111,7 +112,11 @@
                             Hasta:<input type=date name="">
                         </div></div>
                     </div>
-                  </div>              
+                  </div> 
+                <div>
+                <input type="submit"  id="guardars" value="Guardar" onclick="goBack()" > 
+                </div>
+                </form>
             </div>
     </body>
 </html>

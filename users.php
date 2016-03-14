@@ -27,7 +27,6 @@
                     <li><a href="#"><span class="segundo"><i class="icon icon-newspaper"></i></span>Encuestas</a>
                         <ul>
                             <li><a href="survey.php">Iniciar Encuestas</a> </li>  
-                            <li><a href="#">Finalizar Encuestas</a> </li> 
                         </ul>
                     </li>
                     <li><a href="#"><span class="tercero"><i class="icon icon-address-book"></i></span>Control</a>
