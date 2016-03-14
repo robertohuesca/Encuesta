@@ -12,6 +12,7 @@
           <link rel="stylesheet" href="css/model-box.css">  
           <link rel="stylesheet" href="css/Style.css">
           <link rel="stylesheet" href="css/styles.css">
+          <link rel="stylesheet" href="css/general.css">    
           <script src="js/load.js"></script> 
     </head>
     <body>
@@ -46,11 +47,67 @@
                     </ul>
                 </div>
                 <div id="column_right">
-                    <br style="clear:both;" />
+                    <div class="main" id="seguimiento">
+                        <div class="tit"><label>Buscar Alumno</label></div>
+                        
+                        <div id="matri">
+                            <form>
+                                <label>Ingrese Matrícula:</label>
+                                <input id="entrada" type="text" name="matricula" placeholder="421310443" required>
+                                  <input type="submit"  id="btn" value="Buscar" onclick="goBack()" >
+                            </form>
+                        </div>
+                        <div class="tit" id="mat"> <label>Instrucciones</label></div>
+                        <div>
+                            <form>
+                         <p id="instrucciones">
+                    Indique el grado de logro que considera ha sido desempeñado por el alumno durante el presente parcial, por cada uno se valorarán tres aspectos.<br> <br> A= Asistencia,  B= Buen desempeño y C=Conducta,  marcando con una “X” la casilla que consideren más adecuada con base en la siguiente escala:
+                    </p>
+                                <label id="al">Nombre del Alumno:</label>
+                    <table class="demo">
+                        <thead>
+                        <tr>
+                            <th>E = Excelente</th>
+                            <th>B = Bien</th>
+                            <th>NM = Necesita mejorar</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Asiste puntualmente a clases</td>
+                            <td>Entrega las actividades de aprendizaje</td>
+                            <td>Su conducta es adecuada y respetuosa</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="color">
+                                    <option value="E">Excelente</option>
+                                    <option value="B">Bien</option>
+                                    <option value="NM">Necesita mejorar</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="color">
+                                    <option value="E">Excelente</option>
+                                    <option value="B">Bien</option>
+                                    <option value="NM">Necesita mejorar</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="color">
+                                    <option value="E">Excelente</option>
+                                    <option value="B">Bien</option>
+                                    <option value="NM">Necesita mejorar</option>
+                                </select>
+                            </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                                <input type="submit"  id="btn" value="Buscar" onclick="goBack()" >
+                     </form>
+                    </div>
                 </div>
-                
             </div>
-            <div id="footer">
             </div>
         </div>
     </body>

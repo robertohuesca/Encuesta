@@ -96,7 +96,7 @@
             </div>
             <div class="tile">
                 <img  class="rotateMe"src="images/pdf.png" width="80px">
-               <a href="upload/ficha.pdf"> <h4>Descargar ficha</h4></a>
+               <a href="pdf/Guia de evaluacion.pdf"> <h4>Descargar ficha</h4></a>
                 <div id="contenido">Si desea adquirir una copia de la ficha de diagnóstico en blanco, lo puede hacer desde este modulo solo dando clic y se abrirá en formato pdf para que pueda ser descargado.
                     </div>
             </div>
