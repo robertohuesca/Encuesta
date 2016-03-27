@@ -18,7 +18,8 @@
           <link rel="stylesheet" href="css/general.css">
         
           <script src="js/load.js"></script> 
-    </head>
+          <script src="js/alumno.js"></script>    
+    </head> 
     <body>
         <div id="wrapper">
              <header>
@@ -64,7 +65,8 @@
                 <div class="input">
                     <div class="title" style="overflow:auto"><h1>Registrar nuevo alumno</h1></div>
                     <div id="formAlum">
-                        <form name="ALUMNO" id="ALUMNO">
+                        
+                        <form name="ALUMNO" id="ALUMNO" onsubmit="agregar(); return false">
                             <ul>
                             <div class="textArea">
                               <li><label for="cuerpo">Nombre</label></li>
@@ -184,7 +186,7 @@
                               <li><input type="text" name="municipio"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"></li>
                             </div>
                                
-                            <input type="submit"  id="guardars" value="Guardar" onclick="goBack()" > 
+                            <input type="submit"  id="guardars" value="Guardar"> 
        
                         </form>
                     </div>

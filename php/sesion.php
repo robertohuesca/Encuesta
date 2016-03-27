@@ -12,21 +12,30 @@
         $password = "";
         }
 
-    $sql = "select categoria, tutor  from usuarios where usuario='$usuario' and password='$password'";
-    
+    $sql = "select categoria, id_grupo,tutor from usuarios where usuario='$usuario' and password='$password'";
     $result=mysql_query($sql);
     $fila=mysql_fetch_row($result);
     $categoria=$fila[0];
-    $tutor=$fila[1];
+    $id_grupo=$fila[1];
+    $tutor=$fila[2];
     $count = mysql_num_rows($result);
     $user=strtoupper($usuario);
-  
- 
-    if($count == 1){
+    $sql="select grado, grupo from grupos where id_grupo='$id_grupo'";
+    $re=mysql_query($sql);
+    $fila2=mysql_fetch_row($re);
+    $grupo=$fila2[0];
+    $grado=$fila2[1];
+    
+   
+    if($count !=0){
         session_start();
         $_SESSION['usuario']=$user;
         $_SESSION['categoria']=$categoria;
         $_SESSION['tutor']=$tutor;
+        $_SESSION['id_grupo']=$id_grupo;
+        $_SESSION['grado']=$grado;
+        $_SESSION['grupo']=$grupo;
+       
         echo json_encode('datos');
         exit; 
     }

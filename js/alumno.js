@@ -18,27 +18,43 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 }
 
 function agregar(){
+    
     XMLHttp=objetoAjax();
+    
     if(XMLHttp){
-        NOMBRE=document.ALUMNO.nombre.values;
-        APP=document.ALUMNO.paterno.values;
-        APM=document.ALUMNO.materno.values;
-        GENERO=document.ALUMNO.genero.values;
-        NACIONALIDAD=document.ALUMNO.nacionalidad.values;
-        ESTADO=document.ALUMNO.estado.values;
-        FECHA=document.ALUMNO.fecha.values;
-        CURP=document.ALUMNO.curp.values;
-        MATRICULA=document.ALUMNO.matricula.values;
-        CALLE=document.ALUMNO.calle.values;
-        COLONIA=document.ALUMNO.colonia.values;
-        EXTERIOR=document.ALUMNO.exterior.values;
-        INTERIOR=document.ALUMNO.interior.values;
-        POSTAL=document.ALUMNO.postal.values;
-        ENTIDAD=document.ALUMNO.entidad.values;
-        MUNICIPIO=document.ALUMNO.municipio.values;
-        url="php/new_alum.php?NOMBRE="+NOMBRE+"&APP=" + APP+"&APM=" + APM+"&GENERO=" + GENERO+"&NACIONALIDAD=" + NACIONALIDAD+"&ESTADO=" + ESTADO +"&FECHA=" + FECHA +"&CURP=" + CURP +"&MATRICULA=" + MATRICULA +"&CALLE=" + CALLE+"&COLONIA=" + COLONIA+"&EXTERIOR=" + EXTERIOR+"&INTERIOR=" + INTERIOR+"&POSTAL=" + POSTAL +"&ENTIDAD=" + ENTIDAD+"&MUNICIPIO=" + MUNICIPIO
-        XMLHttp.open("POST",url,true);
-        XMLHttp.onreadystatechange=;
+        NOMBRE=document.ALUMNO.nombre.value;
+        APP=document.ALUMNO.paterno.value;
+        APM=document.ALUMNO.materno.value;
+        GENERO=document.ALUMNO.genero.value;
+        NACIONALIDAD=document.ALUMNO.nacionalidad.value;
+        ESTADO=document.ALUMNO.estado.value;
+        FECHA=document.ALUMNO.fecha.value;
+        CURP=document.ALUMNO.curp.value;
+        MATRICULA=document.ALUMNO.matricula.value;
+        CALLE=document.ALUMNO.calle.value;
+        COLONIA=document.ALUMNO.colonia.value;
+        EXTERIOR=document.ALUMNO.exterior.value;
+        INTERIOR=document.ALUMNO.interior.value;
+        POSTAL=document.ALUMNO.postal.value;
+        ENTIDAD=document.ALUMNO.entidad.value;
+        MUNICIPIO=document.ALUMNO.municipio.value;
+        
+        
+         XMLHttp.open('POST','php/new_alum.php',true);
+        
+        
+        XMLHttp.onreadystatechange=function(){
+            
+            if (XMLHttp.readyState==4) {
+               
+                alert("Registro insertado");
+                
+	           }
+            
+        }
+        XMLHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
+        XMLHttp.send("NOMBRE="+NOMBRE+"&APP=" + APP+"&APM=" + APM+"&GENERO=" + GENERO+"&NACIONALIDAD=" + NACIONALIDAD+"&ESTADO=" + ESTADO +"&FECHA=" + FECHA +"&CURP=" + CURP +"&MATRICULA=" + MATRICULA +"&CALLE=" + CALLE+"&COLONIA=" + COLONIA+"&EXTERIOR=" + EXTERIOR+"&INTERIOR=" + INTERIOR+"&POSTAL=" + POSTAL +"&ENTIDAD=" + ENTIDAD+"&MUNICIPIO=" + MUNICIPIO)
+        
     }
     else{
         alert("no se puede crear instancia");
