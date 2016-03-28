@@ -13,7 +13,7 @@
            
             <div id="login">
             <img src="images/IMG.png" width="230px">
-            </div>
+</div>
             <ul>
                 <li>
                    <div id="fond"><img src="images/user.png" id="img"></div>

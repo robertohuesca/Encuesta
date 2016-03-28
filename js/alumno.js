@@ -19,6 +19,7 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 
 function agregar(){
     
+
     XMLHttp=objetoAjax();
     
     if(XMLHttp){
@@ -47,8 +48,11 @@ function agregar(){
             
             if (XMLHttp.readyState==4) {
                
+                //alert("Registro insertado");
                 alert("Registro insertado");
                 
+                //window.location.href=="javascript:Enviar('pages/family.php','column_right')";
+
 	           }
             
         }

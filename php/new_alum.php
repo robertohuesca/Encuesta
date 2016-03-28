@@ -1,5 +1,6 @@
 <?php
     include ('conexion.php');
+        session_start();
         $NOMBRE=$_POST["NOMBRE"];
         $APP=$_POST["APP"];
         $APM=$_POST["APM"];
@@ -18,22 +19,34 @@
         $MUNICIPIO=$_POST["MUNICIPIO"];
 
 
+$query2="INSERT INTO DOMICILIOS (ID_MUNICIPIO, CALLE, COLONIA, N_EXTERIOR, N_INTERIOR, CP)                                  VALUES('$MUNICIPIO','$CALLE','$COLONIA','$EXTERIOR','$INTERIOR','$POSTAL')";
+    $CONSULTA2=mysql_query($query2);
+    $id=mysql_insert_id();
 
-
-    $query3="INSERT INTO DOMICILIOS (ID_MUNICIPIO, CALLE, COLONIA, N_EXTERIOR, N_INTERIOR, CP) VALUES('$MUNICIPIO','$CALLE','$COLONIA','$EXTERIOR','$INTERIOR','$POSTAL')";
+$query3="INSERT INTO PERSONAS (ID_PERSONA,ID_DOMICILIO, NOMBRE,AP_PATERNO,AP_MATERNO, GENERO, NACIONALIDAD, LUGAR_NAC,FECHA_NAC, CURP) VALUES ('$MATRICULA','$id','$NOMBRE','$APP','$APM','$GENERO','$NACIONALIDAD','$ESTADO','$FECHA','$CURP')";
     $CONSULTA3=mysql_query($query3);
 
-    $rs = mysql_query("SELECT @@identity AS id");
-    if ($row = mysql_fetch_row($rs)) {
-    $id = trim($row[0]);
+
+
+//consulta para ver nuestro numero de folio
+$buscar_folio="SELECT FOLIO FROM ALUMNOS";
+
+$resultado=mysql_query($buscar_folio);
+
+while ($Num=mysql_fetch_row($resultado))
+    {
+        $FOLIO=$Num[0];
     }
-    
-        $query2="INSERT INTO PERSONAS (ID_PERSONA,ID_DOMICILIO, NOMBRE,AP_PATERNO,AP_MATERNO, GENERO, NACIONALIDAD, LUGAR_NAC,FEHCA_NAC, CURP) VALUES ('$MATRICULA','$id','$NOMBRE','$APP','$APM','$GENERO','$NACIONALIDAD','$ESTADO','$FECHA','$CURP')";
-        $CONSULTA2=mysql_query($query2);
-    
-           
-        $query1="INSERT INTO ALUMNOS (ID_ALUMNO) VALUES ('$MATRICULA')";
-       
+    if ( $FOLIO=='NULL')
+    {
+    $FOLIO=0001;
+    }else {
+    $FOLIO++;
+    }
+
+ $query1="INSERT INTO ALUMNOS (ID_ALUMNO, ID_GRUPO, FOLIO) VALUES ('$MATRICULA','".$_SESSION['id_grupo']."','$FOLIO')";
+    $query=mysql_query($query1);
+
 
 ?>
 

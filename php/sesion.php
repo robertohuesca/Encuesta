@@ -1,4 +1,5 @@
 <?php
+
     include('conexion.php');
         if (isset($_REQUEST['user'])) {
         $usuario = $_REQUEST['user'];

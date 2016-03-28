@@ -1,14 +1,14 @@
-
 <html>
     <head>
         <meta charset="utf-8">
        <link rel="stylesheet" href="../css/reset.css">
        <link rel="stylesheet" href="../css/general.css">
+       <script src="../js/familiar.js"></script>
     </head>
     <body>
         <div class="main" id="fam">
             <label class="title">En caso de emergencia llamar a</label>
-            <form>
+            <form name="FAMILIAR" id="FAMILIAR" onsubmit="agregar(); return false">
             <div>
                 <table class="tableuser">
                                 <tr>
@@ -48,19 +48,19 @@
                      <ul> 
                             <div class="textArea">
                                 <li><label for="nombre">Nombre</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20" required name="nmadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="nombre">Apellidos</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20" required name="amadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Fecha de Nacimiento</label></li>
-                                <li><input type="date" name="fecha"></li>
+                                <li><input type="date" name="fmadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Lugar de Nacimiento</label></li>
-                                <li><select name="lugar_nac">
+                                <li><select name="nacmadre">
                             <option value=" ">Selecciona una opción</option>
                             <option value="1" rel="01">AGUASCALIENTES</option>
                             <option value="2" rel="02">BAJA CALIFORNIA</option>
@@ -100,11 +100,11 @@
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">(CURP)</label></li>
-                                <li><input type="text" placeholder="" maxlength="18" required></input></li>
+                                <li><input type="text" placeholder="" maxlength="18" required name="cmadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">Grado Maximo de Estudio</label></li>
-                                <li><select name="estudio">
+                                <li><select name="esmadre">
                                     <option value=" ">Selecciona una opción</option>
                                     <option value="">SIN ESTUDIOS</option>
                                     <option value="">PRIMARIA INCOMPLETA</option>
@@ -130,19 +130,19 @@
                         <ul> 
                             <div class="textArea">
                                 <li><label for="nombre">Nombre</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20" required name="npadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="nombre">Apellidos</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20" required name="apadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Fecha de Nacimiento</label></li>
-                                <li><input type="date" name="fecha"></li>
+                                <li><input type="date" name="fecha" name="fpadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Lugar de Nacimiento</label></li>
-                                <li><select name="lugar_nac">
+                                <li><select name="nacpadre">
                             <option value=" ">Selecciona una opción</option>
                             <option value="1" rel="01">AGUASCALIENTES</option>
                             <option value="2" rel="02">BAJA CALIFORNIA</option>
@@ -182,32 +182,32 @@
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">(CURP)</label></li>
-                                <li><input type="text" placeholder="" maxlength="18" required></input></li>
+                                <li><input type="text" placeholder="" maxlength="18" required name="cpadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">Grado Maximo de Estudio</label></li>
-                                <li><select name="estudio">
+                                <li><select name="espadre">
                                     <option value=" ">Selecciona una opción</option>
-                                    <option value="">SIN ESTUDIOS</option>
-                                    <option value="">PRIMARIA INCOMPLETA</option>
-                                    <option value="">PRIMARIA CONCLUIDA</option>
-                                    <option value="">SECUNDARIA INCOMPLETA</option>
-                                    <option value="">SECUNDARIA CONCLUIDA</option>
-                                    <option value="">CARRERA TECNICA</option>
-                                    <option value="">BACHILLERATO INCOMPLETO</option>
-                                    <option value="">BACHILLERATO CONCLUIDO</option>
-                                    <option value="">TEC. SUP. UNIVERSITARIO</option>
-                                    <option value="">LICENCIATURA INCOMPLETA</option>
-                                    <option value="">LICENCIATURA CONCLUIDA</option>
-                                    <option value="">ESPECIALIDAD</option>
-                                    <option value="">MAESTRIA</option>
-                                    <option value="">DOCTORADO</option>
-                                    <option value="">OTRO</option>
+                                    <option value="SIN ESTUDIOS">SIN ESTUDIOS</option>
+                                    <option value="PRIMARIA INCOMPLETA">PRIMARIA INCOMPLETA</option>
+                                    <option value="PRIMARIA CONCLUIDA">PRIMARIA CONCLUIDA</option>
+                                    <option value="SECUNDARIA INCOMPLETA">SECUNDARIA INCOMPLETA</option>
+                                    <option value="SECUNDARIA CONCLUIDA">SECUNDARIA CONCLUIDA</option>
+                                    <option value="CARRERA TECNICA">CARRERA TECNICA</option>
+                                    <option value="BACHILLERATO INCOMPLETO">BACHILLERATO INCOMPLETO</option>
+                                    <option value="BACHILLERATO CONCLUIDO">BACHILLERATO CONCLUIDO</option>
+                                    <option value="TEC. SUP. UNIVERSITARIO">TEC. SUP. UNIVERSITARIO</option>
+                                    <option value="LICENCIATURA INCOMPLETA">LICENCIATURA INCOMPLETA</option>
+                                    <option value="LICENCIATURA CONCLUIDA">LICENCIATURA CONCLUIDA</option>
+                                    <option value="ESPECIALIDAD">ESPECIALIDAD</option>
+                                    <option value="MAESTRIA">MAESTRIA</option>
+                                    <option value="DOCTORADO">DOCTORADO</option>
+                                    <option value="OTRO">OTRO</option>
                                     </select></li>
                             </div>
                         </ul>
                     </div>
-                    <input type="submit"  id="guardars" value="Guardar" onclick="goBack()" > 
+                    <input type="submit"  id="guardars" value="Guardar" >
                 </form>
             </div>
     </body>
