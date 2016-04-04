@@ -102,8 +102,8 @@
                                     <table id="bienes-serv">
                                         <tr>
                                             <td id="t"><label>Agua potable</label></td>
-                                            <td><input type="radio" name="Agua" checked>No</td>
-                                            <td><input type="radio" name="Agua">Sí</td>
+                                            <td><input type="radio" name="Agua" value="" checked>No</td>
+                                            <td><input type="radio" name="Agua" value="agua potable">Sí</td>
                                             <td id="t"><label>Computadora</label></td>
                                             <td><input type="radio" name="PC" checked>No</td>
                                             <td><input type="radio" name="PC">Sí</td>

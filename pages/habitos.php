@@ -71,7 +71,7 @@
 
                          <div class="move">
                                 <label for="">¿Fumas?</label>
-                                <input type="radio" value="no" name="fumas" checked>No
+                                <input type="radio" value="no" name="fumas" onClick="cerrar(this,'DivMuestra3');" checked>No
                                 <input type="radio" value="si" name="fumas" onClick="CompruebaCheckBox(this,'DivMuestra3');">Sí
                                 <div id="DivMuestra3" class="div" style="display:none">¿Cuantos cigarros al día?:
                                     <select>
@@ -84,7 +84,7 @@
                         </div>
                         <div class="move">
                                 <label for="">Consideras que tus amigos ¿tienen alguna adicción?</label>
-                                <input type="radio" value="no" name="adic" checked>No
+                                <input type="radio" value="no" name="adic" onClick="cerrar(this,'DivMuestra4');" checked>No
                                 <input type="radio" value="si" name="adic" onClick="CompruebaCheckBox(this,'DivMuestra4');">Sí
                                 <div id="DivMuestra4" class="div" style="display:none">Especifica:
                                     <input type="text" name="adiccion">
@@ -92,7 +92,7 @@
                         </div>
                         <div class="move">
                                 <label for="">Consideras que tus amigos ¿consumen alguna droga?</label>
-                                <input type="radio" value="no" name="adrog" checked>No
+                                <input type="radio" value="no" name="adrog" onClick="cerrar(this,'DivMuestra');" checked>No
                                 <input type="radio" value="si" name="adrog" onClick="CompruebaCheckBox(this,'DivMuestra');">Sí
                                 <div id="DivMuestra" class="div" style="display:none">Especifica:
                                     <input type="text" name="droga">

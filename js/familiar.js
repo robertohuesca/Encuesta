@@ -17,7 +17,7 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 	return xmlhttp;
 }
 
-function agregar(){
+function insertar(){
 
     XMLHttp=objetoAjax();
 
@@ -43,15 +43,20 @@ function agregar(){
         LUGARMADRE=document.FAMILIAR.nacmadre.value;
         CURPMADRE=document.FAMILIAR.cmadre.value;
         ESTUDIOMADRE=document.FAMILIAR.esmadre.value;
+        TRABAJOMADRE=document.FAMILIAR.servicsalud.value;
+        HORASMADRE=document.FAMILIAR.nhrsm.value;
         //DATOS DEL PADRE
         NOMBREPADRE=document.FAMILIAR.npadre.value;
-        APELLIDOPADRE=document.FAMILIAR.nmadre.value;
+        APELLIDOPADRE=document.FAMILIAR.apadre.value;
         FECHAPADRE=document.FAMILIAR.fpadre.value;
         LUGARPADRE=document.FAMILIAR.nacpadre.value;
         CURPPADRE=document.FAMILIAR.cpadre.value;
         ESTUDIOPADRE=document.FAMILIAR.espadre.value;
+        TRABAJOPADRE=document.FAMILIAR.servicsaludp.value;
+        HORASPADRE=document.FAMILIAR.nhrsp.value;
 
-        XMLHttp.open('POST','F_Familiares.php',true);
+
+        XMLHttp.open('POST','php/F_Familiares.php',true);
 
 
         XMLHttp.onreadystatechange=function(){
@@ -73,8 +78,12 @@ function agregar(){
                          +GENERO2+"&EDAD2="+EDAD2+"&OCUPACION2="+OCUPACION2+
                          "&PARENTESCO2="+PARENTESCO2+"&NOMBREMADRE="+NOMBREMADRE+"&APELLIDOMADRE="+APELLIDOMADRE+
                          "&FECHAMADRE="+FECHAMADRE+"&LUGARMADRE="+LUGARMADRE+"&CURPMADRE="+CURPMADRE+"&ESTUDIOMADRE="+ESTUDIOMADRE+
+                         "&TRABAJOMADRE="+TRABAJOMADRE+"&HORASMADRE="+HORASMADRE+
                          "&NOMBREPADRE="+NOMBREPADRE+"&APELLIDOPADRE="+APELLIDOPADRE+"&FECHAPADRE="+FECHAPADRE+"&LUGARPADRE="+LUGARPADRE+
-                         "&CURPPADRE="+CURPPADRE+"&ESTUDIOPADRE="+ESTUDIOPADRE)
+                         "&CURPPADRE="+CURPPADRE+"&ESTUDIOPADRE="+ESTUDIOPADRE+"&TRABAJOPADRE="+TRABAJOPADRE+"&HORASPADRE="+HORASPADRE)
 
+    }
+    else{
+        alert("no se puede crear instancia");
     }
 }

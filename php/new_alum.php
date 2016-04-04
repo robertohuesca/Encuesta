@@ -29,7 +29,7 @@ $query3="INSERT INTO PERSONAS (ID_PERSONA,ID_DOMICILIO, NOMBRE,AP_PATERNO,AP_MAT
 
 
 //consulta para ver nuestro numero de folio
-$buscar_folio="SELECT FOLIO FROM ALUMNOS";
+$buscar_folio="SELECT folio_encuesta FROM Parametros";
 
 $resultado=mysql_query($buscar_folio);
 
@@ -39,13 +39,20 @@ while ($Num=mysql_fetch_row($resultado))
     }
     if ( $FOLIO=='NULL')
     {
-    $FOLIO=0001;
+    $FOLIO=1;
     }else {
     $FOLIO++;
     }
+    $queryparametr="INSERT INTO Parametros (FOLIO_ENCUESTA) VALUES ('$FOLIO') ";
+    $Rqparam=mysql_query($queryparametr);
+    $folio_formateado="ENC-000".$FOLIO;
 
- $query1="INSERT INTO ALUMNOS (ID_ALUMNO, ID_GRUPO, FOLIO) VALUES ('$MATRICULA','".$_SESSION['id_grupo']."','$FOLIO')";
+    $queryFolio="INSERT INTO ENCUESTAS (FOLIO) VALUES ('$folio_formateado')";
+    $queryF=mysql_query($queryFolio);
+
+    $query1="INSERT INTO ALUMNOS (ID_ALUMNO, ID_GRUPO, FOLIO) VALUES ('$MATRICULA','".$_SESSION['id_grupo']."','$folio_formateado')";
     $query=mysql_query($query1);
+
 
 
 ?>

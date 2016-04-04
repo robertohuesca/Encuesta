@@ -2,15 +2,15 @@
 .container-body {
     border: 1px solid #bec2c8;
     border-radius: 2px;
-    width: 90%;
-    margin-left: 15px;
+    width: 1fr;
+    /*margin-left: 5px;*/
     padding-bottom: 8px;
     margin-top: -10px;
 }
 
 .body {
     border-radius: 2px;
-    width:100%;
+    width:1fr;
     margin:auto;
     padding-top: 20px;
     padding-bottom: 5px;
@@ -21,7 +21,7 @@
     float: left;
     margin-top: 5px;
 }
-
+/*
 .title {
     border-bottom: 1px solid #bec2c8;
     width: 90%;
@@ -29,7 +29,7 @@
     height: 25px;
     font-size: 22px;
 }
-
+*/
 .input {
     margin-bottom: 9px;
 }

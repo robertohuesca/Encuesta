@@ -48,7 +48,7 @@
                         <div class="Div-Boxp">
                                 <div class="box"><label for="">¿Actualmente participas en alguna asociación, equipo o grupo?</label></div>
                                 <div class="box">
-                                <input type="radio" value="si" name="part" checked>No
+                                <input type="radio" value="si" name="part" onClick="cerrar(this,'DivMuestra2');" checked>No
                                 <input type="radio" value="si" name="part" onClick="CompruebaCheckBox(this,'DivMuestra2');">Sí
                                 <div id="DivMuestra2" class="div" style="display:none">Cuál o Cuáles de ellos:
                                 <select>
