@@ -1,4 +1,4 @@
-function objetoAjax(){
+function objetoAjax() {
  var xmlhttp=false;
  try {
  xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
@@ -15,7 +15,7 @@ function objetoAjax(){
    return xmlhttp;
 }
 
-function mostrar(){
+function mostrar() {
 	XMLHttp= objetoAjax(); //Dependiendo de la versión del navegador se hace una instancia
 	if(XMLHttp)	{
 		url="../php/table.php";

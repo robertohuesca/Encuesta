@@ -43,13 +43,13 @@ header{
 
 footer{
     width: auto;
-    height: auto;
-    background-color: #04557A;
+    height: 120px;
+    background-color: rgba(76,76,76,1);
     color: white;
     text-align: center;
-    line-height: 50px;;
+    line-height: 50px;
     font-family: cursive;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 370px;
     position: static;
 }
@@ -65,19 +65,26 @@ footer{
 
 
 #titulo{
-    margin-top:140px;
+    position: absolute;
+    top:240px;
     text-align: center;
     width: 100%;
     font-size: 35px;
 }
-
+.fond{
+    width: 100%;
+    color: white;
+    height: 45%;
+    margin-top: 70px;
+    background-color: #008080;
+}
 #linea{
     position:absolute;
     width: 700px;
     height: 3px;
-    margin-top: 15px;
+    margin-top: 165px;
     //background-color: rgba(242,30,30,0.7);
-    background-color: #075275;
+    background-color: white;
     left: 24%;  
 }
 .tile{
@@ -86,7 +93,7 @@ footer{
     width: 170px;
     height: 240px;
     padding: 10px;
-    margin-top: 93px;
+    margin-top: 63px;
     margin-left: 200px;
     float: left;
     text-align:center;
@@ -122,8 +129,8 @@ footer{
 
 #tipo{
     margin-left: 90px;
-    margin-top: 40px;
-    font-size: 12px;
+    margin-top: 45px;
+    font-size: 14px;
 }
 
 #user{
@@ -135,13 +142,18 @@ footer{
 #tutor{
     font-size: 14px;
     margin-left: 90px;
+    margin-top: 7px;
+}
+#grupo{
+    font-size: 14px;
+    margin-left: 90px;
     margin-top: 20px;
 }
 
 #color{
     width: 100%;
     height: 40px;
-    background-color: #F2F2F2;
+    background-color: #B1B4B5;
     margin-top: 10px;
 }
 
@@ -149,8 +161,8 @@ footer{
     position: absolute;
      margin-top: 18px;
      margin-left: 50px;    
-     width: 50px;
-     height: 50px;
+     width: 55px;
+     height: 55px;
      border-radius: 50%;
      left: -40px;
      top: 1px;
@@ -234,7 +246,7 @@ nav > ul > li:hover > ul{
 nav >ul >li >ul{
     display:block;
     position: absolute;
-    /*background: rgba(137,140,140,0.3);*/
+   /* background: rgba(137,140,140,0.3);*/
     overflow: hidden;
     height: 0%;
     transition: all .3s ease;
@@ -256,7 +268,8 @@ nav > ul li a{
 }
 
 nav > ul > li >ul >li a:hover{
-    background: #5da5a2; 
+    background: #248f8f; 
+    color: #f0f5f5;
 }
 
 nav > ul > li > a span{
@@ -281,7 +294,7 @@ nav > ul > li >a:hover > span{
 }
 /*colores*/
 nav ul li a .primero{
-background: #04557A;
+background: #0F4E70;
 }
 nav ul li a .segundo{
 //background: #B1B4B5;
@@ -291,7 +304,7 @@ nav ul li a .tercero{
 background: #B1B4B5;
 }
 nav ul li a .cuarto{
-background: #04557A ;
+background: #0F4E70 ;
 }
     
     

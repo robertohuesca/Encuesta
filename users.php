@@ -38,11 +38,12 @@
                 </ul>
         </nav>
         </header>
-        <label class="title">Tabla de usuarios</label>
-        <div id="box-table" >
+        <label class="title" id="name_user"><span id="mover">Tabla de usuarios</span></label>
+            <div id="box-table" >
+
+            </div>
         
-        </div>
-        <label class="title">Ingresar nuevo usuario</label>
+        <label class="title" id="name_user"><span id="mover">Ingresar nuevo usuario</span></label>
         
         <form enctype="multipart/form-data" action="php/insert.php" method="post" class="ingreso" name="users" >
             <ul>

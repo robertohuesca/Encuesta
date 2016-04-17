@@ -31,10 +31,10 @@
 }
 
 #submit{
-    width: 150px;
+    width: 50%;
     height: 35px;
     position: relative;
-    margin-left: 30%;
+    margin-left: 25%;
     margin-top: 55px;
     background-color: #A1132A;
     border: 1px #A1132A;
@@ -75,9 +75,9 @@
     border-radius: 0px 5px 5px 0px;
     height: 47px;
     position: relative;
-    margin-left: 80px;
+    margin-left: 20%;
     margin-top: 50px;
-    width: 240px;
+    width: 70%;
     font-size: 18px;
     padding: 5px;
 }
@@ -87,9 +87,9 @@ border: 1px SOLID #D2CACA;
     border-radius: 0px 5px 5px 0px;
     height: 47px;
     position: relative;
-    margin-left: 80px;
+    margin-left: 20%;
     margin-top: 50px;
-    width: 240px;
+    width: 70%;
     font-size: 18px;
     padding: 5px;
 

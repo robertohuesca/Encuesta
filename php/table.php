@@ -22,7 +22,7 @@
    echo " 		<td>".$row['usuario']."</td>";
    echo " 		<td>".$row['password']."</td>";
    echo " 		<td>".$row['tutor']."</td>";
-    echo " 		<td><button class=\"btn btn-primary\" onclick=\"eliminarDato('".$row['id_usuario']."');mostrar()\">Eliminar</button></td>";         
+    echo " 		<td><button class=\"btn-primary\" onclick=\"eliminarDato('".$row['id_usuario']."');mostrar()\">Eliminar</button></td>";
    echo "	</tr>";
    }
    ?>

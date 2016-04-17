@@ -13,12 +13,17 @@
           <link rel="stylesheet" href="css/styles.css">
           <link rel="stylesheet" href="css/container-div.css">
           <link rel="stylesheet" href="css/reset.css">    
-          <link rel="stylesheet" href="css/model-box.css">  
-          <link rel="stylesheet" href="css/encuesta_original.css">
+          <link rel="stylesheet" href="css/model-box.css">
           <link rel="stylesheet" href="css/general.css">
         
+          <script src="js/function.js"></script>
           <script src="js/load.js"></script> 
-    </head>
+          <script src="js/alumno.js"></script>
+          <script src="js/familiar.js"></script>
+          <script src="js/alimentacion.js"></script>
+
+
+    </head> 
     <body>
         <div id="wrapper">
              <header>
@@ -60,11 +65,14 @@
                     <br style="clear:both;" />
                     <div class="container-body">
         <div class="body">
+            <label class="title">Registrar nuevo alumno</label>
             <div class="container-inputs">
+
                 <div class="input">
-                    <div class="title" style="overflow:auto"><h1>Registrar nuevo alumno</h1></div>
+
                     <div id="formAlum">
-                        <form name="ALUMNO" id="ALUMNO">
+                        
+                        <form name="ALUMNO" id="ALUMNO" onsubmit="agregar(); return false">
                             <ul>
                             <div class="textArea">
                               <li><label for="cuerpo">Nombre</label></li>
@@ -151,7 +159,7 @@
                              
                         
                     </div>
-                    <div class="title" style="overflow:auto"><h1>Domicilio</h1></div>
+                    <label id="tit_dom">Domicilio</label>
                     <div id="formAlum">
                        
                             <ul>
@@ -184,7 +192,7 @@
                               <li><input type="text" name="municipio"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"></li>
                             </div>
                                
-                            <input type="submit"  id="guardars" value="Guardar" onclick="goBack()" > 
+                            <input type="submit"  id="guardars" value="Guardar"> 
        
                         </form>
                     </div>

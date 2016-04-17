@@ -65,14 +65,14 @@
                         <div class="Div-Box">
                         <div class="box"><label for="">Durante el último semestre ¿has tenido algún problema de salud?</label></div>
                         <div class="box">
-                            <input type="radio" value="Ninguno" name="problem-salud" checked>No
+                            <input type="radio" value="Ninguno" name="problem-salud" onClick="cerrar(this,'DivMuestra');" checked>No
                             <input type="radio" value="si" name="problem-salud" onClick="CompruebaCheckBox(this,'DivMuestra');">Sí
                         <div id="DivMuestra" class="div" style="display:none">Especificar: <input type="text" name="" size="40"></div></div>
                     </div>
                     <div class="Div-Box">
                         <div class="box"><label for="">¿Actualmente cuenta con algún tipo de servicio de salud?</label></div>
                         <div class="box">
-                            <input type="radio" value="si" name="servic-salud" checked>No
+                            <input type="radio" value="si" name="servic-salud" onClick="cerrar(this,'DivMuestra1');"  checked>No
                             <input type="radio" value="si" name="servic-salud" onClick="CompruebaCheckBox(this,'DivMuestra1');">Sí
                         <div id="DivMuestra1" class="div" style="display:none">Especificar: 
                             <select>
@@ -90,21 +90,21 @@
                     <div class="Div-Box">
                         <div class="box"><label for="">¿Actualmente te encuentras bajo algun tratamiento medico?</label></div>
                         <div class="box">
-                            <input id="radioN" type="radio" value="Ninguno" name="trat-medic" checked>No
+                            <input id="radioN" type="radio" value="Ninguno" name="trat-medic" onClick="cerrar(this,'DivMuestra2');"checked>No
                             <input type="radio" value="si" name="trat-medic" onClick="CompruebaCheckBox(this,'DivMuestra2');">Sí
                         <div id="DivMuestra2" class="div" style="display:none">Especificar: <input type="text" name="" size="40"></div></div>
                     </div>
                     <div class="Div-Box">
                         <div class="box"><label for="">¿Tiene alguna discapacidad fisica?</label></div>
                         <div class="box">
-                            <input type="radio" value="si" name="discapacidad" checked>No
+                            <input type="radio" value="si" name="discapacidad" onClick="cerrar(this,'DivMuestra3');" checked>No
                             <input type="radio" value="si" name="discapacidad" onClick="CompruebaCheckBox(this,'DivMuestra3');">Sí
                         <div id="DivMuestra3" class="div" style="display:none">Especificar: <input type="text" name="" size="40"></div></div>
                     </div>
                     <div class="Div-Box">
                         <div class="box"><label for="">¿Has asistido o asistes a tratamiento psicológico o psiquiátrico?</label></div>
                         <div class="box">
-                            <input type="radio" value="si" name="psic-psiq" checked>No
+                            <input type="radio" value="si" name="psic-psiq" onClick="cerrar(this,'DivMuestra4');" checked>No
                             <input type="radio" value="si" name="psic-psiq" onClick="CompruebaCheckBox(this,'DivMuestra4');">Sí
                         <div id="DivMuestra4" class="div" style="display:none">
                             Lugar: <input type="text" name="" size="20">

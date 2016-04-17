@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,7 +7,7 @@
     <body>
         <div class="main" id="fam">
             <label class="title">En caso de emergencia llamar a</label>
-            <form>
+            <form name="FAMILIAR" id="FAMILIAR" onsubmit="insertar(); return false">
             <div>
                 <table class="tableuser">
                                 <tr>
@@ -23,10 +22,10 @@
                                     <td><input type="text" name="nombre1" ></td>
                                     <td><input type="text" name="apellidos1" ></td>
                                     <td><select class="select" name="genero1">
-                                        <option value="0">MASCULINO</option>
-                                        <option value="1">FEMENINO</option></select>
+                                        <option value="MASCULINO">MASCULINO</option>
+                                        <option value="FEMENINO">FEMENINO</option></select>
                                     </td>
-                                    <td><input type="number" name="edad1" min="1" max="100" required></td>
+                                    <td><input type="number" name="edad1" min="1" max="100" ></td>
                                     <td><input type="text" name="ocupacion1"></td>
                                     <td><input type="text" name="parentesco1"></td>
                                 </tr>
@@ -34,10 +33,10 @@
                                     <td><input type="text" name="nombre2" ></td>
                                     <td><input type="text" name="apellidos2" ></td>
                                     <td><select class="select" name="genero2">
-                                        <option value="0">MASCULINO</option>
-                                        <option value="1">FEMENINO</option></select>
+                                        <option value="MASCULINO">MASCULINO</option>
+                                        <option value="FEMENINO">FEMENINO</option></select>
                                     </td>
-                                    <td><input type="number" name="edad2" min="1" max="100" required></td>
+                                    <td><input type="number" name="edad2" min="1" max="100" ></td>
                                     <td><input type="text" name="ocupacion2"></td>
                                     <td><input type="text" name="parentesco2"></td>
                                 </tr>
@@ -48,19 +47,19 @@
                      <ul> 
                             <div class="textArea">
                                 <li><label for="nombre">Nombre</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20"  name="nmadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="nombre">Apellidos</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20"  name="amadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Fecha de Nacimiento</label></li>
-                                <li><input type="date" name="fecha"></li>
+                                <li><input type="date" name="fmadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Lugar de Nacimiento</label></li>
-                                <li><select name="lugar_nac">
+                                <li><select name="nacmadre">
                             <option value=" ">Selecciona una opción</option>
                             <option value="1" rel="01">AGUASCALIENTES</option>
                             <option value="2" rel="02">BAJA CALIFORNIA</option>
@@ -100,28 +99,37 @@
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">(CURP)</label></li>
-                                <li><input type="text" placeholder="" maxlength="18" required></input></li>
+                                <li><input type="text" placeholder="" maxlength="18"  name="cmadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">Grado Maximo de Estudio</label></li>
-                                <li><select name="estudio">
+                                <li><select name="esmadre">
                                     <option value=" ">Selecciona una opción</option>
-                                    <option value="">SIN ESTUDIOS</option>
-                                    <option value="">PRIMARIA INCOMPLETA</option>
-                                    <option value="">PRIMARIA CONCLUIDA</option>
-                                    <option value="">SECUNDARIA INCOMPLETA</option>
-                                    <option value="">SECUNDARIA CONCLUIDA</option>
-                                    <option value="">CARRERA TECNICA</option>
-                                    <option value="">BACHILLERATO INCOMPLETO</option>
-                                    <option value="">BACHILLERATO CONCLUIDO</option>
-                                    <option value="">TEC. SUP. UNIVERSITARIO</option>
-                                    <option value="">LICENCIATURA INCOMPLETA</option>
-                                    <option value="">LICENCIATURA CONCLUIDA</option>
-                                    <option value="">ESPECIALIDAD</option>
-                                    <option value="">MAESTRIA</option>
-                                    <option value="">DOCTORADO</option>
-                                    <option value="">OTRO</option>
+                                    <option value="ESTUDIOS">SIN ESTUDIOS</option>
+                                    <option value="PRIMARIA INCOMPLETA">PRIMARIA INCOMPLETA</option>
+                                    <option value="PRIMARIA CONCLUIDA">PRIMARIA CONCLUIDA</option>
+                                    <option value="SECUNDARIA INCOMPLETA">SECUNDARIA INCOMPLETA</option>
+                                    <option value="SECUNDARIA CONCLUIDA">SECUNDARIA CONCLUIDA</option>
+                                    <option value="CARRERA TECNICA">CARRERA TECNICA</option>
+                                    <option value="BACHILLERATO INCOMPLETO">BACHILLERATO INCOMPLETO</option>
+                                    <option value="BACHILLERATO CONCLUIDO">BACHILLERATO CONCLUIDO</option>
+                                    <option value="TEC. SUP. UNIVERSITARIO">TEC. SUP. UNIVERSITARIO</option>
+                                    <option value="LICENCIATURA INCOMPLETA">LICENCIATURA INCOMPLETA</option>
+                                    <option value="LICENCIATURA CONCLUIDA">LICENCIATURA CONCLUIDA</option>
+                                    <option value="ESPECIALIDAD">ESPECIALIDAD</option>
+                                    <option value="MAESTRIA">MAESTRIA</option>
+                                    <option value="DOCTORADO">DOCTORADO</option>
+                                    <option value="OTRO">OTRO</option>
                                     </select></li>
+                            </div>
+                          <div class="textArea">
+                                <li><label for="nhrs">Trabaja</label></li>
+                                <input type="radio" value="0" name="servicsalud" onClick="cerrar(this,'DivMuestra1');" checked>No
+                                <input type="radio" value="1" name="servicsalud" onClick="CompruebaCheckBox(this,'DivMuestra1');">Sí
+                            </div>
+                            <div class="textArea" id="DivMuestra1" style="display:none">
+                                <li><label for="nhrs">Horas</label></li>
+                                <li><input type="text" placeholder="" maxlength="18"  name="nhrsm"></li>
                             </div>
                         </ul>
             </div>
@@ -130,19 +138,19 @@
                         <ul> 
                             <div class="textArea">
                                 <li><label for="nombre">Nombre</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20"  name="npadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="nombre">Apellidos</label></li>
-                                <li><input type="text" placeholder="" size="20" required></li>
+                                <li><input type="text" placeholder="" size="20"  name="apadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Fecha de Nacimiento</label></li>
-                                <li><input type="date" name="fecha"></li>
+                                <li><input type="date"  name="fpadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="f_nacimiento">Lugar de Nacimiento</label></li>
-                                <li><select name="lugar_nac">
+                                <li><select name="nacpadre">
                             <option value=" ">Selecciona una opción</option>
                             <option value="1" rel="01">AGUASCALIENTES</option>
                             <option value="2" rel="02">BAJA CALIFORNIA</option>
@@ -182,32 +190,41 @@
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">(CURP)</label></li>
-                                <li><input type="text" placeholder="" maxlength="18" required></input></li>
+                                <li><input type="text" placeholder="" maxlength="18"  name="cpadre"></li>
                             </div>
                             <div class="textArea">
                                 <li><label for="curp">Grado Maximo de Estudio</label></li>
-                                <li><select name="estudio">
+                                <li><select name="espadre">
                                     <option value=" ">Selecciona una opción</option>
-                                    <option value="">SIN ESTUDIOS</option>
-                                    <option value="">PRIMARIA INCOMPLETA</option>
-                                    <option value="">PRIMARIA CONCLUIDA</option>
-                                    <option value="">SECUNDARIA INCOMPLETA</option>
-                                    <option value="">SECUNDARIA CONCLUIDA</option>
-                                    <option value="">CARRERA TECNICA</option>
-                                    <option value="">BACHILLERATO INCOMPLETO</option>
-                                    <option value="">BACHILLERATO CONCLUIDO</option>
-                                    <option value="">TEC. SUP. UNIVERSITARIO</option>
-                                    <option value="">LICENCIATURA INCOMPLETA</option>
-                                    <option value="">LICENCIATURA CONCLUIDA</option>
-                                    <option value="">ESPECIALIDAD</option>
-                                    <option value="">MAESTRIA</option>
-                                    <option value="">DOCTORADO</option>
-                                    <option value="">OTRO</option>
+                                    <option value="SIN ESTUDIOS">SIN ESTUDIOS</option>
+                                    <option value="PRIMARIA INCOMPLETA">PRIMARIA INCOMPLETA</option>
+                                    <option value="PRIMARIA CONCLUIDA">PRIMARIA CONCLUIDA</option>
+                                    <option value="SECUNDARIA INCOMPLETA">SECUNDARIA INCOMPLETA</option>
+                                    <option value="SECUNDARIA CONCLUIDA">SECUNDARIA CONCLUIDA</option>
+                                    <option value="CARRERA TECNICA">CARRERA TECNICA</option>
+                                    <option value="BACHILLERATO INCOMPLETO">BACHILLERATO INCOMPLETO</option>
+                                    <option value="BACHILLERATO CONCLUIDO">BACHILLERATO CONCLUIDO</option>
+                                    <option value="TEC. SUP. UNIVERSITARIO">TEC. SUP. UNIVERSITARIO</option>
+                                    <option value="LICENCIATURA INCOMPLETA">LICENCIATURA INCOMPLETA</option>
+                                    <option value="LICENCIATURA CONCLUIDA">LICENCIATURA CONCLUIDA</option>
+                                    <option value="ESPECIALIDAD">ESPECIALIDAD</option>
+                                    <option value="MAESTRIA">MAESTRIA</option>
+                                    <option value="DOCTORADO">DOCTORADO</option>
+                                    <option value="OTRO">OTRO</option>
                                     </select></li>
+                            </div>
+                            <div class="textArea">
+                                <li><label for="nhrs">Trabaja</label></li>
+                                <input type="radio" value="0" name="servicsaludp" onClick="cerrar(this,'DivMuestra2');" checked>No
+                                <input type="radio" value="1" name="servicsaludp" onClick="CompruebaCheckBox(this,'DivMuestra2');">Sí
+                            </div>
+                            <div class="textArea" id="DivMuestra2" style="display:none">
+                                <li><label for="nhrs">Horas</label></li>
+                                <li><input type="text" placeholder="" maxlength="18"  name="nhrsp"></li>
                             </div>
                         </ul>
                     </div>
-                    <input type="submit"  id="guardars" value="Guardar" onclick="goBack()" > 
+                    <input type="submit"  id="guardars" value="Guardar" >
                 </form>
             </div>
     </body>

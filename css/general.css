@@ -3,6 +3,23 @@
     border-radius: 2px;
 }
 
+.textArea {
+    float:left;
+    margin:5px;
+}
+
+input {
+    margin-bottom: 9px;
+    margin-top: 10px;
+}
+
+select {
+    margin-bottom: 9px;
+    margin-top: 10px;
+}
+
+
+
 .title {
     border-bottom: 1px solid #bec2c8;
     width: 90%;
@@ -50,15 +67,15 @@ Div-Box {
     
 }
 #fam{
-    width: 90%;
-    margin-left: 15px;
+    width: 1fr;
+    /*margin-left: 15px;*/
     padding-bottom: 8px;
     margin-top: 5px;
     height: 700px;
 }
 #socio{
-    width: 90%;
-    margin-left: 15px;
+    width: 1fr;
+
     padding-bottom: 8px;
     margin-top: 5px;
     height: 1000px;
@@ -78,11 +95,21 @@ Div-Box {
     height: 750px;
 }
 #salud{
-    width: 90%;
-    margin-left: 15px;
+    width: 1fr;
+
     padding-bottom: 8px;
     margin-top: 5px;
     height: 650px;
+}
+#tit_dom{
+    border-bottom: 1px solid #bec2c8;
+    width: 90%;
+    margin-bottom: 20px;
+    height: 25px;
+    font-size: 22px;
+    margin-top: 25px;
+
+    margin-left: -2px;
 }
 #seguimiento{
     width: 90%;
@@ -103,8 +130,7 @@ Div-Box {
 /*Catalogo Alimentacion */
 
 #alimen{
-    width: 90%;
-    margin-left: 15px;
+    width: 1fr;
     padding-bottom: 8px;
     margin-top: 5px;
     height: 520px;
